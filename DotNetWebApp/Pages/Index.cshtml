@@ -2,9 +2,44 @@
 @model IndexModel
 @{
     ViewData["Title"] = "Home page";
+    List<int> outputArray = Model.GetFindTheLargestThree(new int[8] { 50, 23, 90, 10, 4, 3, 90, 50 });
+
+    List<int> outputArray2 = Model.FindTheLargestThreeUsingSort(new int[8] { 50, 23, 90, 10, 4, 3, 90, 50 });
+
+    string reverseString = Model.ReverseString("Chennai");
 }
 
 <div class="text-center">
     <h1 class="display-4">Welcome</h1>
     <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+
+
+    <h4>Find the largest three distinct elements in an array</h4>
+    <p>
+        Input: arr[] = {10, 4, 3, 50, 23, 90}
+    </p>
+    <p>
+        Output Should be: 90, 50, 23
+    </p>
+
+    @foreach (var item in outputArray)
+    {
+        <span>@item</span>
+    }
+
+    <p>
+        Using Sort Approch
+    </p>
+    @foreach (var item in outputArray2)
+    {
+        <span>@item</span>
+    }
+
+    <p>
+        Reverse String Output : @reverseString
+    </p>
+
 </div>
+
+
+

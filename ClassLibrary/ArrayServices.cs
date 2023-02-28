@@ -1,4 +1,5 @@
 ﻿using ClassLibrary.Abstraction;
+using System.Collections.Generic;
 
 namespace ClassLibrary
 {
@@ -45,6 +46,56 @@ namespace ClassLibrary
             }
 
             return new int[3] { first, second, third };
+        }
+
+        public int[] FindTheLargestThreeUsingSort(int[] arr)
+        {
+            int arrsize = arr.Length;
+            // There should be atleast three elements
+            if (arrsize < 3)
+            {
+                throw new Exception("Invalid Input");
+            }
+
+
+            int[] outputArray = new int[3];
+
+            HashSet<int> distinctArrayHashSet = new HashSet<int>();
+
+
+            for (int i = 0; i < arrsize; i++)
+            {
+                distinctArrayHashSet.Add(arr[i]);
+
+            }
+
+            int[] distinctArray = new int[3];
+            distinctArray = distinctArrayHashSet.ToArray();
+            Array.Sort(distinctArray);
+            int distinctarrsize = distinctArray.Length;
+
+
+            int insertcount = 0;
+            for (int i = distinctarrsize - 1; i >= distinctarrsize - 3; i--)
+            {
+
+                outputArray[insertcount++] = distinctArray[i];
+            }
+
+            return outputArray;
+        }
+
+        public string ReverseString(string str)
+        {
+            char[] chars = str.ToCharArray();
+            char[] charsOutput = new char[chars.Length];
+            string output = string.Empty;
+            for (int i = chars.Length - 1; i >= 0; i--)
+            {
+                output += chars[i];
+            }
+
+            return output;
         }
     }
 
