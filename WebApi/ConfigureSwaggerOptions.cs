@@ -49,16 +49,17 @@ namespace WebApi
         private OpenApiInfo CreateVersionInfo(
                 ApiVersionDescription desc)
         {
-            var info = new OpenApiInfo()
-            {
-                Title = ".NET Core (.NET 7) Web API",
-                Version = desc.ApiVersion.ToString()
-            };
+
+            var info = new OpenApiInfo();
+            info.Title = ".NET Core (.NET 7) Web API";
+            info.Version = desc.ApiVersion.ToString();
+            if (desc.ApiVersion.ToString() == "1.0")
+                info.Description = "An ASP.NET Core Web API V1";
+            else if (desc.ApiVersion.ToString() == "2.0")
+                info.Description = "An ASP.NET Core Web API V2";
 
             if (desc.IsDeprecated)
-            {
                 info.Description += " This API version has been deprecated. Please use one of the new APIs available from the explorer.";
-            }
 
             return info;
         }
