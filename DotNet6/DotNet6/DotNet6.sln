@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.6.33712.159
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DotNet6.API", "..\DotNet6.API\DotNet6.API.csproj", "{12513DFC-F867-44E5-8EA9-D94CE7F8B572}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DotNet6.Web", "..\DotNet6.Web\DotNet6.Web.csproj", "{7B9AAA87-8BFF-413B-AEF7-F9CC5423E9B2}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{12513DFC-F867-44E5-8EA9-D94CE7F8B572}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{12513DFC-F867-44E5-8EA9-D94CE7F8B572}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{12513DFC-F867-44E5-8EA9-D94CE7F8B572}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{12513DFC-F867-44E5-8EA9-D94CE7F8B572}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7B9AAA87-8BFF-413B-AEF7-F9CC5423E9B2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7B9AAA87-8BFF-413B-AEF7-F9CC5423E9B2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7B9AAA87-8BFF-413B-AEF7-F9CC5423E9B2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7B9AAA87-8BFF-413B-AEF7-F9CC5423E9B2}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {48ECE41A-93E8-4C4E-86FE-171A1B9BDED5}
+	EndGlobalSection
+EndGlobal
